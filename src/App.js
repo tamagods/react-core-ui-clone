@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
-    <Navbar />
+    <Fragment>
+      <Navbar />
+      <div className="app-body">
+        <Sidebar />
+      </div>
+    </Fragment>
   );
 }
 

@@ -4,11 +4,19 @@ import NavItemRight from './NavItem/NavItemRight';
 
 function Navbar() {
 
-    const handleClicked = (event) => { };
+    const handleClicked = (event) => {
+        event.preventDefault();
+        document.querySelector('body').classList.toggle('sidebar-hidden');
+    };
+
+    const handleClickedMobile = (event) => {
+        event.preventDefault();
+        document.querySelector('body').classList.toggle('sidebar-mobile-show');
+    };
 
     return (
         <header className="app-header navbar">
-            <button className="navbar-toggler d-lg-none" type="button" onClick={handleClicked}>
+            <button className="navbar-toggler d-lg-none" type="button" onClick={handleClickedMobile}>
                 <span className="navbar-toggler-icon"></span>
             </button>
             <a className="navbar-brand" href="/#">{null}</a>
