@@ -1,12 +1,11 @@
 .app-header.navbar {
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
   position: relative;
   flex-direction: row;
   height: $navbar-height;
   padding: 0;
   margin: 0;
   background-color: $navbar-bg;
-  // @include borders($navbar-border);
+  @include borders($navbar-border);
 
   .navbar-brand {
     display: inline-block;
@@ -19,7 +18,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: $navbar-brand-logo-size;
-    // @include borders($navbar-brand-border);
+    @include borders($navbar-brand-border);
   }
 
   .navbar-toggler {
