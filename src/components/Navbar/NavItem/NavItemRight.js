@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import avatar from '../../../assets/img/avatar.jpeg';
 
 function NavItemRight() {
     return (
@@ -50,11 +51,64 @@ function NavItemRight() {
                     <i className="icon-location-pin"></i>
                 </a>
             </li>
-            <li className="nav-item dropdown" placement="bottom right">
-                <a className="nav-link" data-toggle="dropdown" href="/#" role="button" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown">
+                <a aria-haspopup="true" id="user-dropdown" className="nav-link" data-toggle="dropdown" href="/#" role="button" aria-expanded="false">
+                    <img alt="test@example.com" className="img-avatar" src={avatar} />
                 </a>
+                {/* <div aria-labelledby="simple-dropdown" className="dropdown-menu dropdown-menu-right" style="left: auto; right: 0px;"><div className="dropdown-header text-center"><strong>Account</strong></div><a className="dropdown-item" href="#"><i className="fa fa-bell-o"></i> Updates<span className="badge badge-info">42</span></a><a className="dropdown-item" href="#"><i className="fa fa-envelope-o"></i> Messages<span className="badge badge-success">42</span></a><a className="dropdown-item" href="#"><i className="fa fa-tasks"></i> Tasks<span className="badge badge-danger">42</span></a><a className="dropdown-item" href="#"><i className="fa fa-comments"></i> Comment<span className="badge badge-warning">42</span></a><div className="dropdown-header text-center"><strong>Settings</strong></div><a className="dropdown-item" href="#"><i className="fa fa-user"></i> Profile</a><a className="dropdown-item" href="#"><i className="fa fa-wrench"></i> Setting</a><a className="dropdown-item" href="#"><i className="fa fa-usd"></i> Payments<span className="badge badge-dark">42</span></a><a className="dropdown-item" href="#"><i className="fa fa-file"></i> Projects<span className="badge badge-primary">42</span></a><div className="divider"></div><a className="dropdown-item" href="#"><i className="fa fa-shield"></i> Lock account</a><a className="dropdown-item" href="#"><i className="fa fa-lock"></i> Logout</a></div></li> */}
+                <div aria-labelledby="user-dropdown" className="dropdown-menu dropdown-menu-right">
+                    <div className="dropdown-header text-center">
+                        <strong>Account</strong>
+                    </div>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-bell-o"></i>
+                        Updates
+                        <span className="badge badge-info">42</span>
+                    </a>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-envelope-o"></i>
+                        Messages<span className="badge badge-success">42</span>
+                    </a><a className="dropdown-item" href="/#">
+                        <i className="fa fa-tasks"></i>
+                        Tasks
+                        <span className="badge badge-danger">42</span>
+                    </a>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-comments"></i>
+                        Comment
+                        <span className="badge badge-warning">42</span>
+                    </a>
+                    <div className="dropdown-header text-center">
+                        <strong>Settings</strong>
+                    </div>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-user"></i>
+                        Profile
+                        </a>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-wrench"></i>
+                        Setting</a>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-usd"></i>
+                        Payments
+                        <span className="badge badge-dark">42</span>
+                    </a>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-file"></i>
+                        Projects
+                        <span className="badge badge-primary">42</span>
+                    </a>
+                    <div className="divider"></div>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-shield"></i>
+                        Lock account
+                        </a>
+                    <a className="dropdown-item" href="/#">
+                        <i className="fa fa-lock"></i>
+                        Logout</a>
+                </div>
             </li>
-        </Fragment>
+        </Fragment >
     )
 }
 

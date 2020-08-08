@@ -21,6 +21,9 @@ function Navbar() {
             <ul className="nav navbar-nav ml-auto">
                 <NavItemRight />
             </ul>
+            <button type="button" className="navbar-toggler d-none d-lg-block">
+                <span className="navbar-toggler-icon"></span>
+            </button>
         </header >
     )
 }

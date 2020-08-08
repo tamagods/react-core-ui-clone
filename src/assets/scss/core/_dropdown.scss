@@ -13,7 +13,8 @@
     width: 20px;
     margin-right: 10px;
     margin-left: -10px;
-    color: $dropdown-border-color;
+    // color: $dropdown-border-color;
+    color: #73818f;
     text-align: center;
   }
 
@@ -26,9 +27,12 @@
 
 // Dropdown section headers
 .dropdown-header {
+  // padding: 8px 20px;
+  // background: $dropdown-divider-bg;
+  // border-bottom: 1px solid $dropdown-border-color;
   padding: 8px 20px;
-  background: $dropdown-divider-bg;
-  border-bottom: 1px solid $dropdown-border-color;
+  background: #e4e7ea;
+  border-bottom: 1px solid #c8ced3;
 
   .btn {
     margin-top: -7px;
@@ -47,11 +51,14 @@
 .dropdown-menu-lg {
   width: 250px;
 }
+
 .app-header {
   .navbar-nav {
     .dropdown-menu {
       position: absolute;
+      border-radius: .25em;
     }
+
     // Menu positioning
     //
     // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
