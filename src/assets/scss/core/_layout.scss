@@ -8,6 +8,7 @@
 
 // app-dashboard and app-root are Angular2+ selectors. You can add here your own selectors if you need.
 .app,
+#root,
 app-dashboard,
 app-root {
   display: flex;
@@ -50,12 +51,17 @@ app-root {
 //
 // header
 //
-.header-fixed {
-  .app-header {
-    position: fixed;
-    z-index: $zindex-sticky;
-    width: 100%;
+@media(min-width:992px) {
+  .header-fixed {
+    .app-header {
+      position: fixed;
+      z-index: $zindex-sticky;
+      width: 100%;
+    }
   }
+}
+
+.header-fixed {
   .app-body {
     margin-top: $navbar-height;
   }
@@ -83,12 +89,15 @@ app-root {
     // }
   }
 
-  .main, .app-footer {
+  .main,
+  .app-footer {
     margin-left: $sidebar-width;
   }
 
   &.sidebar-hidden {
-    .main, .app-footer {
+
+    .main,
+    .app-footer {
       margin-left: 0;
     }
   }
@@ -115,7 +124,9 @@ app-root {
     }
 
     &.sidebar-fixed {
-      .main, .app-footer {
+
+      .main,
+      .app-footer {
         margin-left: $sidebar-compact-width;
       }
 
@@ -124,7 +135,9 @@ app-root {
       }
 
       &.sidebar-hidden {
-        .main, .app-footer {
+
+        .main,
+        .app-footer {
           margin-left: 0;
         }
       }
@@ -143,7 +156,9 @@ app-root {
     }
 
     &.sidebar-fixed {
-      .main, .app-footer {
+
+      .main,
+      .app-footer {
         margin-left: $sidebar-minimized-width;
       }
 
@@ -152,7 +167,9 @@ app-root {
       }
 
       &.sidebar-hidden {
-        .main, .app-footer {
+
+        .main,
+        .app-footer {
           margin-left: 0;
         }
       }
@@ -180,12 +197,15 @@ app-root {
     }
   }
 
-  .main, .app-footer {
+  .main,
+  .app-footer {
     margin-right: $aside-menu-width;
   }
 
   &.aside-menu-hidden {
-    .main, .app-footer {
+
+    .main,
+    .app-footer {
       margin-right: 0;
     }
   }
@@ -250,13 +270,15 @@ app-root {
     }
   }
 
-  &.sidebar-hidden, &.sidebar-off-canvas {
+  &.sidebar-hidden,
+  &.sidebar-off-canvas {
     .main .breadcrumb {
       left: 0;
     }
   }
 
-  &.aside-menu-hidden, &.aside-menu-off-canvas {
+  &.aside-menu-hidden,
+  &.aside-menu-off-canvas {
     .main .breadcrumb {
       right: 0;
     }
@@ -291,9 +313,11 @@ app-root {
 .aside-menu {
   transition: margin-left $layout-transition-speed, margin-right $layout-transition-speed, width $layout-transition-speed, flex $layout-transition-speed;
 }
+
 .sidebar-nav {
   transition: width $layout-transition-speed;
 }
+
 .breadcrumb {
   transition: left $layout-transition-speed, right $layout-transition-speed, width $layout-transition-speed;
 }
@@ -312,9 +336,11 @@ app-root {
     @include borders($navbar-brand-border);
 
     .navbar-toggler {
-      @if (lightness( $navbar-brand-bg ) > 40) {
+      @if (lightness($navbar-brand-bg) > 40) {
         color: $navbar-color;
-      } @else {
+      }
+
+      @else {
         color: #fff;
       }
     }
@@ -356,7 +382,8 @@ app-root {
     }
   }
 
-  .main, .app-footer {
+  .main,
+  .app-footer {
     margin-left: 0 !important;
   }
 
