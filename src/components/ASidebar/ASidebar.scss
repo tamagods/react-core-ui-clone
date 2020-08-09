@@ -1,0 +1,16 @@
+.list-group-item:first-child {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.list-group-accent .list-group-item {
+    margin-bottom: 1px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+.list-group-item-accent-secondary {
+    border-left: 4px solid #c8ced3 !important;
+}

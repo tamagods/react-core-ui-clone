@@ -14,6 +14,11 @@ function Navbar() {
         document.querySelector('body').classList.toggle('sidebar-mobile-show');
     };
 
+    const handleClickedAsidebar = (event) => {
+        event.preventDefault();
+        document.querySelector('body').classList.toggle('aside-menu-hidden');
+    };
+
     return (
         <header className="app-header navbar">
             <button className="navbar-toggler d-lg-none" type="button" onClick={handleClickedMobile}>
@@ -29,7 +34,7 @@ function Navbar() {
             <ul className="nav navbar-nav ml-auto">
                 <NavItemRight />
             </ul>
-            <button type="button" className="navbar-toggler d-none d-lg-block">
+            <button type="button" className="navbar-toggler d-none d-lg-block" onClick={handleClickedAsidebar}>
                 <span className="navbar-toggler-icon"></span>
             </button>
         </header >
