@@ -24,6 +24,15 @@ function Sidebar() {
                                 Colors
                             </NavLink>
                         </li>
+                        <li className="nav-title">
+                            Components
+                        </li>
+                        <li className="nav-item">
+                            <NavLink exact className="nav-link" activeClassName="active" to="/components/charts">
+                                <i className="nav-icon icon-pie-chart"></i>
+                                Charts
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>

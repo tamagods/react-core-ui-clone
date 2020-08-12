@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Dashboard from './views/Dashboard/Dashboard';
 import Colors from './views/Theme/Colors/Colors';
+import Charts from './views/Charts/Charts';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/theme/colors" component={Colors} />
+            <Route exact path="/components/charts" component={Charts} />
           </Switch>
         </main>
         <ASidebar />

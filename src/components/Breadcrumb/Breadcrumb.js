@@ -1,5 +1,6 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './Breadcrumb.scss';
+import { Link } from 'react-router-dom';
 
 function Breadcrumb({ items }) {
 
@@ -15,7 +16,7 @@ function Breadcrumb({ items }) {
             <ol className="breadcrumb">
                 {breadCrumbItem.map((item, index) => (
                     <li className={breadCrumbItem[breadCrumbItem.length - 1] === item ? 'breadcrumb-item active' : 'breadcrumb-item'} key={index}>
-                        {breadCrumbItem[breadCrumbItem.length - 1] === item ? <span>{item.name}</span> : <a href={item.path}>{item.name}</a>}
+                        {breadCrumbItem[breadCrumbItem.length - 1] === item ? <span>{item.name}</span> : <Link to={item.path}>{item.name}</Link>}
                     </li>
                 ))}
 
