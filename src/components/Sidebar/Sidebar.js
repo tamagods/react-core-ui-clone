@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import './Sidebar.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Sidebar() {
     return (
@@ -9,11 +9,20 @@ function Sidebar() {
                 <nav className="sidebar-nav">
                     <ul className="nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/dashboard">
+                            <NavLink exact className="nav-link" activeClassName="active" to="/">
                                 <i className="nav-icon icon-speedometer"></i>
                                 Dashboard
                                 <span className="badge badge-info">NEW</span>
-                            </Link>
+                            </NavLink>
+                        </li>
+                        <li className="nav-title">
+                            Theme
+                        </li>
+                        <li className="nav-item">
+                            <NavLink exact className="nav-link" activeClassName="active" to="/theme/colors">
+                                <i className="nav-icon icon-drop"></i>
+                                Colors
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>

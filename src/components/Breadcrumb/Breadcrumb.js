@@ -1,16 +1,24 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import './Breadcrumb.scss';
 
-function Breadcrumb() {
+function Breadcrumb({ items }) {
+
+    const [breadCrumbItem, setBreadCrumbItem] = useState([]);
+
+    useEffect(() => {
+        setBreadCrumbItem(items);
+        // eslint-disable-next-line
+    }, []);
+
     return (
         <Fragment>
             <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                    <a href="#/">Home</a>
-                </li>
-                <li className="breadcrumb-item active">
-                    <span>Dashboard</span>
-                </li>
+                {breadCrumbItem.map((item, index) => (
+                    <li className={breadCrumbItem[breadCrumbItem.length - 1] === item ? 'breadcrumb-item active' : 'breadcrumb-item'} key={index}>
+                        {breadCrumbItem[breadCrumbItem.length - 1] === item ? <span>{item.name}</span> : <a href={item.path}>{item.name}</a>}
+                    </li>
+                ))}
+
                 <li className="breadcrumb-menu d-md-down-none">
                     <div aria-label="Button group with nested dropdown" className="btn-group" role="group">
                         <a className="btn" href="/#">
