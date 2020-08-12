@@ -27,3 +27,161 @@
 
 // Import Font-Awesome source files
 @import "~font-awesome/css/font-awesome.css";
+
+.brand-card {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #c8ced3;
+    border-radius: .25rem;
+}
+
+.brand-card,
+.brand-card-header {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.brand-card-header {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 6rem;
+    border-radius: .25rem .25rem 0 0;
+}
+
+.bg-facebook {
+    background-color: #3b5998 !important;
+}
+
+.bg-google-plus {
+    background-color: #d34836 !important;
+}
+
+.bg-twitter {
+    background-color: #00aced !important;
+}
+
+.bg-linkedin {
+    background-color: #4875b4 !important;
+}
+
+.brand-card-header i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.brand-card-body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: .75rem 0;
+    text-align: center;
+}
+
+.brand-card-body>* {
+    -ms-flex: 1;
+    flex: 1;
+    padding: .1875rem 0;
+}
+
+.brand-card-body>:not(:last-child) {
+    border-right: 1px solid #c8ced3;
+}
+
+.brand-card-header .chart-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-group-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: .25rem;
+}
+
+.progress-group-icon {
+    margin: 0 1rem 0 .25rem;
+    font-size: 1.09375rem;
+}
+
+.progress-xs {
+    height: 4px
+}
+
+.progress-sm {
+    height: 8px
+}
+
+.progress-white {
+    background-color: hsla(0, 0%, 100%, .2)
+}
+
+.progress-white .progress-bar {
+    background-color: #fff
+}
+
+.progress-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+}
+
+.progress-group-prepend {
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.progress-group-icon {
+    margin: 0 1rem 0 .25rem;
+    font-size: 1.09375rem
+}
+
+.progress-group-text {
+    font-size: .765625rem;
+    color: #73818f
+}
+
+.progress-group-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: .25rem
+}
+
+.progress-group-bars {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.progress-group-bars .progress:not(:last-child) {
+    margin-bottom: 2px
+}
+
+.progress-group-header+.progress-group-bars {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%
+}

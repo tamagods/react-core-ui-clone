@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Chart from 'chart.js';
 
-function Twitter() {
+function Linkedin() {
     const [chart] = useState('');
 
     useEffect(() => {
-        var ctx = document.getElementById('chartTwitter').getContext('2d');
+        var ctx = document.getElementById('chartLinkedIn').getContext('2d');
 
         new Chart(ctx, {
             type: 'line',
@@ -15,7 +15,7 @@ function Twitter() {
                 datasets: [{
                     backgroundColor: 'rgba(255,255,255,.2)',
                     borderColor: 'rgba(255,255,255,.55)',
-                    data: [81, 45, 34, 40, 80, 65, 12],
+                    data: [45, 34, 40, 81, 80, 65, 12],
                     label: 'Series A'
                 }]
             },
@@ -51,23 +51,23 @@ function Twitter() {
 
     return (
         <div className="brand-card">
-            <div className="brand-card-header bg-twitter">
-                <i className="fa fa-twitter"></i>
+            <div className="brand-card-header bg-linkedin">
+                <i className="fa fa-linkedin"></i>
                 <div className="chart-wrapper">
-                    <canvas id="chartTwitter" className="chart"></canvas>
+                    <canvas id="chartLinkedIn" className="chart"></canvas>
                 </div>
             </div>
             <div className="brand-card-body"><div>
-                <div className="text-value">973k</div>
-                <div className="text-uppercase text-muted small">followers</div>
+                <div className="text-value">500+</div>
+                <div className="text-uppercase text-muted small">contacts</div>
             </div>
                 <div>
-                    <div className="text-value">1.792</div>
-                    <div className="text-uppercase text-muted small">tweets</div>
+                    <div className="text-value">292</div>
+                    <div className="text-uppercase text-muted small">feeds</div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Twitter;
+export default Linkedin;

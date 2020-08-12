@@ -14,7 +14,7 @@
     padding: $navbar-padding-y $navbar-padding-x;
     margin-right: 0;
     background-color: $navbar-brand-bg;
-    background-image: $navbar-brand-logo;
+    // background-image: $navbar-brand-logo;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: $navbar-brand-logo-size;
@@ -64,7 +64,7 @@
         margin-left: 0;
       }
 
-      > .img-avatar {
+      >.img-avatar {
         height: $navbar-height - 20px;
         margin: 0 10px;
       }
@@ -98,8 +98,8 @@
     }
   }
 
-  .open > .nav-link,
-  .active > .nav-link,
+  .open>.nav-link,
+  .active>.nav-link,
   .nav-link.open,
   .nav-link.active {
     @include plain-hover-focus {
@@ -109,7 +109,7 @@
 }
 
 .navbar-divider {
-  background-color: rgba(0,0,0,.075);
+  background-color: rgba(0, 0, 0, .075);
 }
 
 @include media-breakpoint-up(lg) {

@@ -1,6 +1,8 @@
 import React from 'react';
+import logo from '../../assets/img/core-ui.svg';
 import NavItemLeft from './NavItem/NavItemLeft';
 import NavItemRight from './NavItem/NavItemRight';
+import './Navbar.scss';
 
 function Navbar() {
 
@@ -24,7 +26,9 @@ function Navbar() {
             <button className="navbar-toggler d-lg-none" type="button" onClick={handleClickedMobile}>
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <a className="navbar-brand" href="/#">{null}</a>
+            <a className="navbar-brand" href="/dashboard">
+                <img className="navbar-brand-full" src={logo} width="89" height="25" alt="CoreUI Logo" />
+            </a>
             <button className="navbar-toggler d-md-down-none" type="button" onClick={handleClicked}>
                 <span className="navbar-toggler-icon"></span>
             </button>
