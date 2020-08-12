@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
+import { Route } from 'react-router-dom';
 import './App.scss';
 import ASidebar from './components/ASidebar/ASidebar';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
-import { Route } from 'react-router-dom';
 import Dashboard from './views/Dashboard/Dashboard';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </main>
         <ASidebar />
       </div>
+      <Footer />
     </Fragment>
   );
 }
