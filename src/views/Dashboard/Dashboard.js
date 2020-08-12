@@ -15,7 +15,7 @@ import './Dashboard.scss';
 function Dashboard() {
 
     const breadCrumbItems = () => {
-        return [{ name: 'Dashboard', path: '/dashboard' }]
+        return [{ name: 'Home', path: '' }, { name: 'Dashboard', path: '/dashboard' }]
     };
 
     return (
